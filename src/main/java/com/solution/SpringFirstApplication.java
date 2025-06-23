@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.solution.process.Activity;
+import com.solution.process.Integration;
 
 @SpringBootApplication
 public class SpringFirstApplication {
@@ -35,6 +36,9 @@ public class SpringFirstApplication {
     System.out.println("Documenting 1 hashCode: " + Integer.toHexString(documenting.hashCode()));
     System.out.println("Documenting 2 hashCode: " + Integer.toHexString(documenting2.hashCode()));
     System.out.println("Documenting 3 hashCode: " + Integer.toHexString(documenting3.hashCode()));
+	
+    Integration integration = (Integration)ac.getBean("integration");
+    integration.task();
 	}
 
 }

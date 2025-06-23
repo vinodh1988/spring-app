@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Scope;
 import com.solution.process.Activity;
 import com.solution.process.Coding;
 import com.solution.process.Documenting;
+import com.solution.process.Integration;
 
 @Configuration
 public class AppConfiguration {
@@ -22,5 +23,10 @@ public class AppConfiguration {
 	@Scope("prototype") // Change to "prototype" to create a new instance each time
 	public Activity coding() {
 		return new Coding();
+	}
+	
+	@Bean("integration")
+    public Integration integration() {
+		return new Integration();
 	}
 }
